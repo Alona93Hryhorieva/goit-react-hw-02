@@ -1,9 +1,13 @@
 import { useState } from "react";
-
-import { Description, Feedback, Options } from "./componens";
+import Description from "../Description/Description";
+import Options from "../Options/Options";
+import Feedback from "../Feedback/Feedback";
+// import userData from "../../userData.json";
+// import friends from "../../friends.json";
+// import transactions from "../../transactions.json";
 
 export default function App() {
-  const [values, setValues] = useState({
+  const [feedbackTypes, setFeedbackTypes] = useState({
     good: 0,
     neutral: 0,
     bad: 0,
@@ -11,7 +15,10 @@ export default function App() {
 
   return (
     <div>
-      <Description />
+      <Description
+        title="Sip Happens Café"
+        response="Please leave your feedback about our service by selecting one of the options below."
+      />
       <Options />
       <Feedback />
     </div>
