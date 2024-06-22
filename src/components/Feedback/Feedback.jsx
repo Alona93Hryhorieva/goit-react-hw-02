@@ -1,4 +1,5 @@
 export default function Feedback({ good, neutral, bad, total, positive }) {
+  positive = total > 0 ? Math.round((good / total) * 100) : 0;
   return (
     <ul>
       <li>Good: {good}</li>
